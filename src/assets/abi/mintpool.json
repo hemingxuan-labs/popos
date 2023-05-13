@@ -1,0 +1,221 @@
+[
+    {
+        "inputs": [{ "internalType": "address", "name": "stoken", "type": "address" }],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "depositedTimestamp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "depositedDays",
+                "type": "uint256"
+            }
+        ],
+        "name": "MintStake",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [{ "indexed": false, "internalType": "string", "name": "uid", "type": "string" }],
+        "name": "UpdateReward",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "mintSeq", "type": "uint256" },
+            { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" },
+            { "indexed": false, "internalType": "uint256", "name": "timestamp", "type": "uint256" }
+        ],
+        "name": "Withdraw",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "ALL_REWARD_AMOUNT",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "curMintSeq",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "curRewardAmount",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "uint256", "name": "mintSeq", "type": "uint256" }],
+        "name": "getMintInfo",
+        "outputs": [
+            {
+                "components": [
+                    { "internalType": "address", "name": "user", "type": "address" },
+                    { "internalType": "uint256", "name": "amount", "type": "uint256" },
+                    { "internalType": "uint256", "name": "depositedReward", "type": "uint256" },
+                    { "internalType": "uint256", "name": "depositedTime", "type": "uint256" },
+                    { "internalType": "uint256", "name": "depositedDays", "type": "uint256" }
+                ],
+                "internalType": "struct PoposMinting.UserInfo",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getWithdrawInfos",
+        "outputs": [
+            {
+                "components": [
+                    { "internalType": "uint256", "name": "mintSeq", "type": "uint256" },
+                    { "internalType": "address", "name": "user", "type": "address" },
+                    { "internalType": "bool", "name": "withdrawable", "type": "bool" },
+                    { "internalType": "bool", "name": "withdrawed", "type": "bool" }
+                ],
+                "internalType": "struct PoposMinting.WithdrawInfo[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "name": "mintInfo",
+        "outputs": [
+            { "internalType": "address", "name": "user", "type": "address" },
+            { "internalType": "uint256", "name": "amount", "type": "uint256" },
+            { "internalType": "uint256", "name": "depositedReward", "type": "uint256" },
+            { "internalType": "uint256", "name": "depositedTime", "type": "uint256" },
+            { "internalType": "uint256", "name": "depositedDays", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "address", "name": "user", "type": "address" },
+            { "internalType": "uint256", "name": "mintSeq", "type": "uint256" },
+            { "internalType": "uint256", "name": "amount", "type": "uint256" },
+            { "internalType": "uint256", "name": "depositedDays", "type": "uint256" }
+        ],
+        "name": "mintStake",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "stakeId",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "stakeToken",
+        "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "uint256[]", "name": "mintSeqs", "type": "uint256[]" },
+            { "internalType": "uint256[]", "name": "rewards", "type": "uint256[]" },
+            { "internalType": "string", "name": "uid", "type": "string" }
+        ],
+        "name": "updateReward",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "uint256", "name": "mintSeq", "type": "uint256" }],
+        "name": "validSeq",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "uint256", "name": "mintSeq", "type": "uint256" },
+            { "internalType": "address", "name": "user", "type": "address" }
+        ],
+        "name": "validSeqByAddress",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "uint256", "name": "mintSeq", "type": "uint256" }],
+        "name": "withdraw",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{ "internalType": "uint256", "name": "mintSeq", "type": "uint256" }],
+        "name": "withdrawable",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

@@ -1,0 +1,25 @@
+.header-box {
+    min-height: 70px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-bottom: 1px solid #e8e8e842;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    overflow-x: auto;
+    .logo-box {
+        color: #acf10c;
+        font-size: 40px;
+    }
+    .header-item-box {
+        display: flex;
+        cursor: pointer;
+        .header-item {
+            color: #fff;
+            margin: 0 30px;
+        }
+    }
+}

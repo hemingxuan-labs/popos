@@ -1,0 +1,38 @@
+.outlet {
+    min-height: calc(100vh - 230px);
+}
+@font-face {
+    font-family: 'Glicker';
+    src: url('../font/Gliker-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Glicker !important;
+}
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    margin-bottom: 0;
+}
+p {
+    margin: 0;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+button {
+    border: none;
+    outline: none;
+}
