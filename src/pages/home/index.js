@@ -139,7 +139,7 @@ function Home() {
                     <a href="https://discord.gg/EataDHPrM5" target="_blank" rel="noreferrer">
                         <i className="iconfont icon-discord text-white fs-3 mx-3"></i>
                     </a>
-                    <a href="https://twitter.com/POPOSLabs" target="_blank" rel="noreferrer">
+                    <a href="https://poposlabs.medium.com" target="_blank" rel="noreferrer">
                         <i className="iconfont icon-medium text-white fs-3 mx-3"></i>
                     </a>
                 </div>
@@ -252,11 +252,17 @@ function Home() {
                     <div className="col-md-6">
                         <h1 style={{ color: '#acf10c' }}>Welcome to POPOS</h1>
                         <h3 className="text-white mt-3">
-                            POPOS is a modern-day Nile crocodile who followed the scent of MEMECOIN
-                            from the Nile River and made ample preparations to join the MEMECOIN
-                            army. With sharp teeth and armored body, POPOS is well-defended and has
-                            strong attacking power. Though a bit silly, it is very powerful.
+                            POPOS is just a modern alligator. POPOS came from Mississippi with the
+                            breath of MEMECOIN. To join the army of MEMECOIN, POPOS has made
+                            sufficient preparations. POPOS has polished its sharp teeth and armored
+                            its body. I have to say that its defense is strong and its attack is
+                            stronger. Although it is a bit silly, it is very powerful.
                         </h3>
+                        <MyButton className="z-1 text-nowrap px-4 mt-6" onClick={() => {}}>
+                            <a href="https://docs.poposlabs.io/" target="_blank" rel="noreferrer">
+                                Konw More About
+                            </a>
+                        </MyButton>
                     </div>
                     <div className="col-md-6">
                         <img
@@ -301,7 +307,7 @@ function Home() {
                     POPOS keeps earning food through staking, unless the world ends.
                 </h3>
                 <MyButton className="z-1 text-nowrap px-4 mt-6" onClick={() => {}}>
-                    Coomimg Soon
+                    Coming Soon
                 </MyButton>
                 <img
                     className="position-absolute top-50 end-0 translate-middle-y z-0"

@@ -39,6 +39,10 @@ export default function PrimarySearchAppBar() {
         {
             title: 'Staking',
             path: '/staking'
+        },
+        {
+            title: 'Docs',
+            path: 'Docs'
         }
     ]
     const [openSnackbar, setOpenSnackbar] = React.useState(false)
@@ -102,6 +106,10 @@ export default function PrimarySearchAppBar() {
                                         key={item.title}
                                         className="mx-3"
                                         onClick={() => {
+                                            if (item.path === 'Docs') {
+                                                window.open('https://docs.poposlabs.io/')
+                                                return
+                                            }
                                             if (
                                                 item.path === '/earn' ||
                                                 item.path === '/staking' ||
@@ -140,7 +148,7 @@ export default function PrimarySearchAppBar() {
                     <div
                         className="my-4"
                         style={{ width: '100%', height: '1px', background: '#fff' }}></div>
-                    <div className="fs-8 text-center">POPOS © 2023. All right reserved.</div>
+                    <div className="fs-8 text-center">POPOSLabs © 2023. All right reserved.</div>
                 </div>
             </footer>
         </div>

@@ -92,7 +92,7 @@ export default function PrimarySearchAppBar() {
                 open={openSnackbar}
                 autoHideDuration={2500}
                 onClose={handleClose}
-                message="Cooming Soon"
+                message="Coming Soon"
                 action={action}
             />
             <header className="header-box webkit-scrollbar-none pb-0">
